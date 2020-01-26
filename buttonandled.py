@@ -6,13 +6,13 @@ GPIO.setup(22, GPIO.OUT)
 GPIO.setup(23, GPIO.IN)
 
 while True:
-    if GPIO.input(23) == 0:
-        #Ausschalten
-        GPIO.output(22, GPIO.HIGH)
-        
+    if GPIO.input(23) == 1: #scheinbar ist 1 in meiner schaltung AUS
+         #Ausschalten
+        GPIO.output(22, GPIO.LOW)
+
     else:
         #Einschalten
-        GPIO.output(22, GPIO.LOW)
+        GPIO.output(22, GPIO.HIGH)
         
 #for i in range(5):
  #   GPIO.output(22, GPIO.HIGH)
